@@ -4,7 +4,7 @@ import Home from "pages/Home/index"; // not created yet
 
 const Router = () => {
   return (
-    <Routes></Routes>
+    <Routes>
       <Route path={RoutePath.HOME} element={<Home />} />
     </Routes>
   );
