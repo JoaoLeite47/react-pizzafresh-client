@@ -1,12 +1,14 @@
 import Menu from "components/Menu";
-import { DateTime } from "luxon";
 import { ReactComponent as Search } from "assets/icons/search.svg";
+import { DateTime } from "luxon";
+import * as S from "./style";
 import { RoutePath } from "types/routes";
 import { navigationItems } from "data/navigation";
-import OrderDetails from "components/OrderDetails";
 import ProductItemList from "components/ProductItemList";
 import ProductItem from "components/ProductItem";
-import * as S from "./style";
+import OrderDetails from "components/OrderDetails";
+import Overlay from "components/Overlay";
+import CheckoutSection from "components/Checkout Section";
 
 const Home = () => {
   const dateDescription = DateTime.now().toLocaleString({
@@ -46,6 +48,9 @@ const Home = () => {
       <aside>
         <OrderDetails />
       </aside>
+      <Overlay>
+        <CheckoutSection />
+      </Overlay>
     </S.Home>
   );
 };
