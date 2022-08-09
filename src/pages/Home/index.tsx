@@ -3,6 +3,7 @@ import { DateTime } from "luxon";
 import { ReactComponent as Search } from "assets/icons/search.svg";
 import { RoutePath } from "types/routes";
 import { navigationItems } from "data/navigation";
+import OrderDetails from "components/OrderDetails";
 import ProductItemList from "components/ProductItemList";
 import ProductItem from "components/ProductItem";
 import * as S from "./style";
@@ -43,7 +44,7 @@ const Home = () => {
         </div>
       </S.HomeContent>
       <aside>
-        <p>Detalhes dos pedidos aqui</p>
+        <OrderDetails />
       </aside>
     </S.Home>
   );
