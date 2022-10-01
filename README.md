@@ -67,4 +67,11 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <table>
   <tr>
     <td align="center"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/100146681?v=4" width="100px;" alt=""/><br /><sub><b>João Leite</b></sub></a><br />😎</a></td>
+    </tr>
 </table>
+<table>
+  <tr>
+    <td align="center"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/103685560?v=4" width="100px;" alt=""/><br /><sub><b>Jorge Anjos</b></sub></a><br /></a></td>
+        </tr>
+</table>
+
