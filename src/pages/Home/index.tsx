@@ -17,6 +17,7 @@ import { OrderItemType } from "types/OrderItemType";
 import { useQuery } from "@tanstack/react-query";
 import { QueryKey } from "types/QueryKey";
 import { ProductService } from "services/ProductService";
+import { TableService } from "services/TableService";
 
 const Home = () => {
   const dateDescription = DateTime.now().toLocaleString({
@@ -26,11 +27,16 @@ const Home = () => {
 
   const navigate = useNavigate();
 
-  // Após a atualização da biblioteca react query (sendo utilizada como @tanstack/react-query), o método useQuery agora só aceita array como primeiro parâmetro ao invés de string como mostrado no vídeo
   const { data: productsData } = useQuery(
     [QueryKey.PRODUCTS],
     ProductService.getLista
   );
+  const { data: tablesData } = useQuery(
+    [QueryKey.TABLES],
+    TableService.getLista
+  );
+
+  const tables = tablesData || [];
 
   const [products, setProducts] = useState<ProductResponse[]>([]);
 
@@ -92,7 +98,7 @@ const Home = () => {
             <b>Pizzas</b>
           </S.HomeProductTitle>
           <S.HomeProductList>
-            <ProductItemList onSelectTable={setSelectedTable}>
+            <ProductItemList tables={tables} onSelectTable={setSelectedTable}>
               {Boolean(products.length) &&
                 products.map((product, index) => (
                   <ProductItem
