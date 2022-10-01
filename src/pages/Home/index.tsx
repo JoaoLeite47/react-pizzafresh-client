@@ -65,7 +65,7 @@ const Home = () => {
         </div>
       </S.HomeContent>
       <aside>
-        <OrderDetails />
+        <OrderDetails orders={orders} />
       </aside>
       {/* <Overlay>
                 <CheckoutSection />
